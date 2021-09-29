@@ -1,0 +1,56 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch DiscoveryServiceApplication",
+      "request": "launch",
+      "mainClass": "inpt.ac.discoveryservice.DiscoveryServiceApplication"
+    },
+    {
+      "type": "java",
+      "name": "Launch GatewayServiceApplication",
+      "request": "launch",
+      "mainClass": "inpt.ac.gatewayservice.GatewayServiceApplication"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-BookServiceApplication<book-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "inpt.ac.bookservice.BookServiceApplication",
+      "projectName": "book-service",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-CustomerServiceApplication<customer-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "inpt.ac.customerservice.CustomerServiceApplication",
+      "projectName": "customer-service",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-GatewayServiceApplication<gateway-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "inpt.ac.gatewayservice.GatewayServiceApplication",
+      "projectName": "gateway-service",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DiscoveryServiceApplication<discovery-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "inpt.ac.discoveryservice.DiscoveryServiceApplication",
+      "projectName": "discovery-service",
+      "args": ""
+    }
+  ]
+}
