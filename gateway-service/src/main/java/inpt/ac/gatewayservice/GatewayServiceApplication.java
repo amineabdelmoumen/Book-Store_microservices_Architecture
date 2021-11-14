@@ -16,18 +16,21 @@ public class GatewayServiceApplication {
 		SpringApplication.run(GatewayServiceApplication.class, args);
 	}
 
+	@Bean
+	DiscoveryClientRouteDefinitionLocator definitionLocator(ReactiveDiscoveryClient rdc,
+			DiscoveryLocatorProperties prp) {
+		return new DiscoveryClientRouteDefinitionLocator(rdc, prp);
+	}
+
 	// @Bean
 	// static configuration
+
+	// @Bean
 	RouteLocator routeLocatorBuild(RouteLocatorBuilder build) {
 		return build.routes().route(r -> r.path("/customers/**").uri("http://localhost:8081"))
 				.route(r -> r.path("/books/**").uri("http://localhost:8082")).build();
 	}
 
 	// Dynamic configuration using DiscoveryClientRouteDefintionLocator Object
-	@Bean
-	DiscoveryClientRouteDefinitionLocator definitionLocator(ReactiveDiscoveryClient rdc,
-			DiscoveryLocatorProperties prp) {
-		return new DiscoveryClientRouteDefinitionLocator(rdc, prp);
-	}
 
 }

@@ -51,6 +51,16 @@
       "mainClass": "inpt.ac.discoveryservice.DiscoveryServiceApplication",
       "projectName": "discovery-service",
       "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-BillingServiceApplication<billing-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "inpt.ac.billingservice.BillingServiceApplication",
+      "projectName": "billing-service",
+      "args": ""
     }
   ]
 }
