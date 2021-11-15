@@ -14,18 +14,18 @@ import javax.persistence.Transient;
 public class Bill {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     private Date billingdate;
     @OneToMany(mappedBy = "bill", fetch = FetchType.LAZY)
     private Collection<BookItem> booktItems;
-    private long customerID;
+    private Long customerID;
     @Transient
     private Customer customer;
 
     public Bill() {
     }
 
-    public Bill(long id, Date billingdate, Collection<BookItem> booktItems, long customerID, Customer customer) {
+    public Bill(Long id, Date billingdate, Collection<BookItem> booktItems, Long customerID, Customer customer) {
         this.id = id;
         this.billingdate = billingdate;
         this.booktItems = booktItems;
@@ -33,11 +33,11 @@ public class Bill {
         this.customer = customer;
     }
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -57,7 +57,7 @@ public class Bill {
         this.booktItems = booktItems;
     }
 
-    public long getCustomerID() {
+    public Long getCustomerID() {
         return this.customerID;
     }
 
@@ -73,7 +73,7 @@ public class Bill {
         this.customer = customer;
     }
 
-    public Bill id(long id) {
+    public Bill id(Long id) {
         setId(id);
         return this;
     }
@@ -88,7 +88,7 @@ public class Bill {
         return this;
     }
 
-    public Bill customerID(long customerID) {
+    public Bill customerID(Long customerID) {
         setCustomerID(customerID);
         return this;
     }

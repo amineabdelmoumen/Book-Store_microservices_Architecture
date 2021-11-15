@@ -2,7 +2,7 @@ package inpt.ac.billingservice.entities;
 
 public class Book {
 
-    private long id;
+    private Long id;
 
     private String name;
 
@@ -11,13 +11,13 @@ public class Book {
     public Book() {
     }
 
-    public Book(long id, String name, double price) {
+    public Book(Long id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -38,7 +38,7 @@ public class Book {
         this.name = name;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

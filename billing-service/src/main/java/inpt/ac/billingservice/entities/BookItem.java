@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 @Entity
 public class BookItem {
     @Id
@@ -13,8 +16,9 @@ public class BookItem {
     private Long id;
     private double quantity;
     private double price;
-    private long BookID;
+    private Long BookID;
 
+    @JsonProperty(access = Access.WRITE_ONLY)
     @ManyToOne
     private Bill bill;
     @Transient
@@ -23,7 +27,7 @@ public class BookItem {
     public BookItem() {
     }
 
-    public BookItem(Long id, double quantity, double price, long BookID, Bill bill, Book book) {
+    public BookItem(Long id, double quantity, double price, Long BookID, Bill bill, Book book) {
         this.id = id;
         this.quantity = quantity;
         this.price = price;
@@ -56,7 +60,7 @@ public class BookItem {
         this.price = price;
     }
 
-    public long getBookID() {
+    public Long getBookID() {
         return this.BookID;
     }
 
@@ -95,7 +99,7 @@ public class BookItem {
         return this;
     }
 
-    public BookItem BookID(long BookID) {
+    public BookItem BookID(Long BookID) {
         setBookID(BookID);
         return this;
     }
